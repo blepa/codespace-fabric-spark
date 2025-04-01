@@ -1,0 +1,15 @@
+{
+    "name": "Fabric-Spark-Emulator",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {
+            "moby": true,
+            "azureDnsAutoDetection": true,
+            "installDockerBuildx": true,
+            "dockerDashComposeVersion": "v1"
+        }
+    },
+    "postCreateCommand": "bash -c './scripts/install-dev-tools.sh'"
+}
